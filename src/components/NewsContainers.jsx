@@ -7,7 +7,9 @@ const NewsContainers = ({ category }) => {
   let fetchNews = async (category) => {
     try {
       let response = await axios.get(
-        `https://newsapi.org/v2/everything?q=${category}&apiKey=30ce6b10a813416aa7c48f65994f35d3`
+        `https://newsapi.org/v2/everything?q=${category}&apiKey=${
+          import.meta.env.VITE_API_KEY
+        }`
       );
       setNewsData(response.data.articles);
     } catch (error) {
