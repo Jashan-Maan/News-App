@@ -6,7 +6,7 @@ const NewsPage = () => {
   const [category, setCategory] = useState("india");
 
   return (
-    <div className="h-screen w-full  flex flex-col justify-start items-center">
+    <div className="min-h-screen w-full  flex flex-col justify-start items-center">
       <Navbar setCategory={setCategory} />
       <NewsContainers category={category} />
     </div>
